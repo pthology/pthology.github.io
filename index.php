@@ -5,6 +5,7 @@
 </head>
 <body>
   <h1>Welcome to the PHP example</h1>
+  <h1>Welcome to the python example</h1>
 
   <p>
     <?php
