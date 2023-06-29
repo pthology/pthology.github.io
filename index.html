@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Console Log Terminal</title>
+  <title>Web Shell Terminal</title>
   <style>
-    body {
-      font-family: 'Courier New', monospace;
-      background-color: #212121;
-      color: #ffffff;
-      padding: 20px;
-    }
-    
-    .terminal {
-      background-color: #000000;
-      padding: 10px;
-      overflow: auto;
+    #terminal {
+      width: 600px;
       height: 400px;
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      overflow-y: scroll;
     }
-    
-    .log-line {
-      color: #ffffff;
-      font-size: 14px;
-      margin: 5px 0;
+
+    #input-line {
+      display: flex;
+    }
+
+    #input-prefix {
+      color: green;
+    }
+
+    #input-text {
+      flex-grow: 1;
+      background-color: transparent;
+      border: none;
+      color: white;
+      outline: none;
     }
   </style>
 </head>
 <body>
-  <div class="terminal" id="console">
-    <!-- Console log will be added dynamically here -->
+  <div id="terminal">
+    <pre>Welcome to Web Shell Terminal!</pre>
+  </div>
+  <div id="input-line">
+    <span id="input-prefix">$</span>
+    <input type="text" id="input-text" autofocus>
   </div>
 
-  <script>
-    // Override console.log to display in the terminal
-    console.log = function(message) {
-      var consoleDiv = document.getElementById('console');
-      var logLine = document.createElement('div');
-      logLine.className = 'log-line';
-      logLine.textContent = message;
-      consoleDiv.appendChild(logLine);
-    };
-
-    // Example usage
-    console.log('Hello, world!');
-    console.log('This is a test log message.');
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
