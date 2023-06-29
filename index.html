@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello World</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>Console Log Terminal</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #212121;
+      color: #ffffff;
+      padding: 20px;
+    }
+    
+    .terminal {
+      background-color: #000000;
+      padding: 10px;
+      overflow: auto;
+      height: 400px;
+    }
+    
+    .log-line {
+      color: #ffffff;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <?php
-            echo "Hello, World!";
-        ?>
-    </div>
+  <div class="terminal" id="console">
+    <!-- Console log will be added dynamically here -->
+  </div>
+
+  <script>
+    // Override console.log to display in the terminal
+    console.log = function(message) {
+      var consoleDiv = document.getElementById('console');
+      var logLine = document.createElement('div');
+      logLine.className = 'log-line';
+      logLine.textContent = message;
+      consoleDiv.appendChild(logLine);
+    };
+
+    // Example usage
+    console.log('Hello, world!');
+    console.log('This is a test log message.');
+  </script>
 </body>
 </html>
