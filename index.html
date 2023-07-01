@@ -1,43 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Web Shell Terminal</title>
-  <style>
-    #terminal {
-      width: 600px;
-      height: 400px;
-      background-color: black;
-      color: white;
-      font-family: monospace;
-      overflow-y: scroll;
-    }
-
-    #input-line {
-      display: flex;
-    }
-
-    #input-prefix {
-      color: green;
-    }
-
-    #input-text {
-      flex-grow: 1;
-      background-color: transparent;
-      border: none;
-      color: white;
-      outline: none;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glamour Event</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div id="terminal">
-    <pre>Welcome to Web Shell Terminal!</pre>
-  </div>
-  <div id="input-line">
-    <span id="input-prefix">$</span>
-    <input type="text" id="input-text" autofocus>
-  </div>
 
-  <script src="script.js"></script>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+        <li><a href="#entertainment">Entertainment</a></li>
+        <li><a href="#dress-code">Dress Code</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="hero">
+      <h1>Glamour Event</h1>
+      <h2>Join us for an unforgettable evening of elegance and style</h2>
+      <a href="#tickets" class="cta-button">Get Tickets</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>Welcome to the Glamour Event, where style meets sophistication. This glamorous gathering celebrates the epitome of elegance with captivating performances, exquisite dining, and an ambiance of luxury. Join us for a night you'll remember forever.</p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="image-grid">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <!-- Add more images here -->
+      </div>
+    </div>
+  </section>
+
+  <section id="tickets">
+    <div class="container">
+      <h2>Tickets</h2>
+      <p>Secure your spot at the most glamorous event of the year! Choose from our range of ticket options:</p>
+      <ul class="ticket-list">
+        <li>
+          <h3>VIP Ticket</h3>
+          <p>Enjoy exclusive access to the VIP lounge, front-row seating, and personalized service.</p>
+          <p class="ticket-price">$199</p>
+          <a href="#" class="cta-button">Buy Now</a>
+        </li>
+        <li>
+          <h3>Regular Ticket</h3>
+          <p>Experience the glamour with general admission access and a night filled with entertainment.</p>
+          <p class="ticket-price">$99</p>
+          <a href="#" class="cta-button">Buy Now</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="entertainment">
+    <div class="container">
+      <h2>Entertainment</h2>
+      <div class="artist-grid">
+        <div class="artist">
+          <img src="artist1.jpg" alt="Artist 1">
+          <h4>Grace Anderson</h4>
+          <p>Vocalist</p>
+        </div>
+        <div class="artist">
+          <img src="artist2.jpg" alt="Artist 2">
+          <h4>Michael Stevens</h4>
+          <p>Pianist</p>
+        </div>
+        <!-- Add more artists here -->
+      </div>
+    </div>
+  </section>
+
+  <section id="dress-code">
+    <div class="container">
+      <h2>Dress Code</h2>
+      <p>For this glamorous affair, we encourage you to dress to impress. Embrace your inner style icon and choose attire that exudes elegance and sophistication. Dress code: Black tie.</p>
+    </div>
+  </section>
+
+  <section id="location">
+    <div class="container">
+      <h2>Location</h2>
+      <p>The Glamour Event will be held at the luxurious Grand Ballroom, located in the heart of the city. Join us at:</p>
+      <address>
+        Grand Ballroom<br>
+        123 Glamour Avenue<br>
+        City, State, ZIP
+      </address>
+      <a href="#" class="cta-button">Get Directions</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>For any inquiries or further information, please contact us using the form below:</p>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="cta-button">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Glamour Event. All rights reserved.</p>
+      <ul>
+        <li><a href="#terms">Terms of Service</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
+
 </html>
