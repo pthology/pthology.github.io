@@ -177,6 +177,7 @@ footer ul li a {
   .container {
     max-width: 480px;
     padding: 0 10px;
+    background:green;
   }
 
   .image-grid,
